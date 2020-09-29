@@ -3,12 +3,16 @@ public class HelloWorld {
 //        System.out.println("Hello, World!");
 //        System.out.print("Hello");
 //        System.out.print(" Bio!");
+
 //        int myfavoriteNumber = 7;
 //        System.out.println(myfavoriteNumber);
+
 //        String myString = "Mike Klanica";
 //        System.out.println(myString);
+
 //        float myNumber = 3.14F;
 //        System.out.println(myNumber);
+
 //        int x = 5;
 //        System.out.println(x++);
 //        System.out.println(x);
