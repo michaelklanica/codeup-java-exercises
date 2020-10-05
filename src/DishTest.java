@@ -6,5 +6,9 @@ public class DishTest {
         dish1.wouldRecommend = true;
 
         dish1.printSummary();
+
+        System.out.println(DishTools.AVERAGE_COST_OF_DISH_IN_CENTS);
+
+
     }
 }
