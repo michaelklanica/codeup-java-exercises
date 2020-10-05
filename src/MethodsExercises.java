@@ -22,6 +22,9 @@ public class MethodsExercises {
             String response = input.nextLine();
             repeat = response.equalsIgnoreCase("y");
         } while (repeat);
+
+        rollDice(input);
+
     }
 
         public static long addNums(long num1, long num2) {
@@ -69,7 +72,23 @@ public class MethodsExercises {
         return total;
     }
 
+    public static void randomize(short sides) {
+        System.out.println( (int) Math.floor(Math.random() * sides));
+    }
 
+    public static void rollDice (Scanner input){
+        while(true) {
+            System.out.println("Number of sides: ");
+            short sides = Short.parseShort(input.nextLine());
+            randomize(sides);
+            System.out.println("Do you want to continue [y/n]?");
+            if (input.nextLine().equalsIgnoreCase("n")) {
+                break;
+            }
+
+
+        }
+    }
 
 }
 
