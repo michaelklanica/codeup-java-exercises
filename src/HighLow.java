@@ -18,12 +18,6 @@ public class HighLow {
                 System.out.println("GOOD GUESS");
                 break;
             }
-
-
-
-
         }
-
-
     }
 }
