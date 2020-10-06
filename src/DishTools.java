@@ -8,7 +8,7 @@ public class DishTools {
         String message = (d.costInCents < AVERAGE_COST_OF_DISH_IN_CENTS) ? "Less than average" : "more than average";
     }
 
-    public static void flipRecommendatio(Dish d) {
+    public static void flipRecommendation(Dish d) {
 
     }
 }
