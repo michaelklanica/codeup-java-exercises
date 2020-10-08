@@ -5,40 +5,25 @@ public class Movie {
     private String name;
     private String category;
 
-    public Movie(String name, String category) {
-        this.name = name;
-        this.category = category;
+    public Movie(String aName, String aCategory) {
+        this.name = aName;
+        this.category = aCategory;
     }
 
-    public String getMovieName() {
+    public String getName() {
         return this.name;
     }
 
-    public String getMovieCategory() {
+    public String getCategory() {
         return this.category;
     }
 
-    public void setMovieName(String name) {
-        this.name = name;
+    public void setName(String aName) {
+        this.name = aName;
     }
 
-    public void setMovieCategory(String category) {
-        this.category = name;
+    public void setCategory(String aCategory) {
+        this.category = aCategory;
     }
 
-    public static void getMovies() {
-        System.out.println("getting all movies...");
-        for (Movie movie : MoviesArray.findAll()) {
-            System.out.println(movie.getMovieName());
-        }
-    }
-
-    public static void getMovies(String category) {
-        System.out.println("getting " + category + " movies...");
-        for (Movie movie : MoviesArray.findAll()) {
-            if (movie.getMovieCategory() == category) {
-                System.out.println(movie.getMovieName());
-            }
-        }
-    }
 }

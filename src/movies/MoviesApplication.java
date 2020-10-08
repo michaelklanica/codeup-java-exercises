@@ -17,33 +17,30 @@ public class MoviesApplication {
             System.out.println("6 - view movies in comedy category");
             System.out.println("7 - view movies in musical category\n");
 
-
-            int response = input.getInt(0, 7);
-
-            switch (response) {
+            switch (input.getInt(0, 7)) {
                 case 0:
                     System.out.println("exiting...");
                     return;
                 case 1:
-                    Movie.getMovies();
+                    getMovies();
                     break;
                 case 2:
-                    Movie.getMovies("animated");
+                    getMovies("animated");
                     break;
                 case 3:
-                    Movie.getMovies("drama");
+                    getMovies("drama");
                     break;
                 case 4:
-                    Movie.getMovies("horror");
+                    getMovies("horror");
                     break;
                 case 5:
-                    Movie.getMovies("scifi");
+                    getMovies("scifi");
                     break;
                 case 6:
-                    Movie.getMovies("comedy");
+                    getMovies("comedy");
                     break;
                 case 7:
-                    Movie.getMovies("musical");
+                    getMovies("musical");
                     break;
                 default:
                     break;
@@ -52,20 +49,19 @@ public class MoviesApplication {
         } while (true);
     }
 
-//    public static void getMovies() {
-//        System.out.println("getting all movies...");
-//        for (Movie movie : MoviesArray.findAll()) {
-//            System.out.println(movie.getMovieName());
-//        }
-//    }
-//
-//    public static void getMovies(String category) {
-//        System.out.println("getting " + category + " movies...");
-//        for (Movie movie : MoviesArray.findAll()) {
-//            if (movie.getMovieCategory() == category) {
-//                System.out.println(movie.getMovieName());
-//            }
-//        }
-//    }
+    public static void getMovies() {
+        System.out.println("getting all movies...");
+        for (Movie movie : MoviesArray.findAll()) {
+            System.out.println(movie.getName());
+        }
+    }
 
+    public static void getMovies(String category) {
+        System.out.println("getting " + category + " movies...");
+        for (Movie movie : MoviesArray.findAll()) {
+            if (movie.getCategory().equalsIgnoreCase(category)) {
+                System.out.println(movie.getName());
+            }
+        }
+    }
 }
