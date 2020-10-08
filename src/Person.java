@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Person {
 
     private String name;
@@ -8,6 +10,7 @@ public class Person {
     public Person(String name) {
         this.name = name;
     }
+
     public String getName() {
         //TODO: return the person's name
         return this.name;
@@ -21,6 +24,13 @@ public class Person {
     public void sayHello() {
         //TODO: print a message to the console using the person's name
         System.out.println(this.name + " says \"hello.\"");
+    }
+
+    public static Person[] addPerson(Person[] people, Person newPerson) {
+        Person[] newPeopleArray = Arrays.copyOf(people, people.length + 1);
+        newPeopleArray[people.length] = newPerson;
+
+        return newPeopleArray;
     }
 
 
