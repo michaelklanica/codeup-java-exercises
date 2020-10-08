@@ -1,8 +1,6 @@
 package movies;
 
-
 import util.Input;
-
 
 public class MoviesApplication {
     public static void main(String[] args) {
@@ -27,71 +25,47 @@ public class MoviesApplication {
                     System.out.println("exiting...");
                     return;
                 case 1:
-                    System.out.println("getting all movies...");
-                    Movie[] allMovies = MoviesArray.findAll();
-                    for (Movie movie : allMovies) {
-                        System.out.println(movie.getMovieName());
-                    }
+                    Movie.getMovies();
                     break;
                 case 2:
-                    System.out.println("getting animated movies...");
-                    Movie[] animatedMovies = MoviesArray.findAll();
-                    for (Movie movie : animatedMovies) {
-                        if (movie.getMovieCategory() == "animated") {
-                            System.out.println(movie.getMovieName());
-                        }
-                    }
+                    Movie.getMovies("animated");
                     break;
                 case 3:
-                    System.out.println("getting dramas...");
-                    Movie[] dramaMovies = MoviesArray.findAll();
-                    for (Movie movie : dramaMovies) {
-                        if (movie.getMovieCategory() == "drama") {
-                            System.out.println(movie.getMovieName());
-                        }
-                    }
+                    Movie.getMovies("drama");
                     break;
                 case 4:
-                    System.out.println("getting horror movies...");
-                    Movie[] horrorMovies = MoviesArray.findAll();
-                    for (Movie movie : horrorMovies) {
-                        if (movie.getMovieCategory() == "horror") {
-                            System.out.println(movie.getMovieName());
-                        }
-                    }
+                    Movie.getMovies("horror");
                     break;
                 case 5:
-                    System.out.println("getting sci-fi movies...");
-                    Movie[] scifiMovies = MoviesArray.findAll();
-                    for (Movie movie : scifiMovies) {
-                        if (movie.getMovieCategory() == "scifi") {
-                            System.out.println(movie.getMovieName());
-                        }
-                    }
+                    Movie.getMovies("scifi");
                     break;
                 case 6:
-                    System.out.println("getting comedies...");
-                    Movie[] comedyMovies = MoviesArray.findAll();
-                    for (Movie movie : comedyMovies) {
-                        if (movie.getMovieCategory() == "comedy") {
-                            System.out.println(movie.getMovieName());
-                        }
-                    }
+                    Movie.getMovies("comedy");
                     break;
                 case 7:
-                    System.out.println("getting musical movies...");
-                    Movie[] musicalMovies = MoviesArray.findAll();
-                    for (Movie movie : musicalMovies) {
-                        if (movie.getMovieCategory() == "musical") {
-                            System.out.println(movie.getMovieName());
-                        }
-                    }
+                    Movie.getMovies("musical");
                     break;
                 default:
                     break;
             }
 
-
         } while (true);
     }
+
+//    public static void getMovies() {
+//        System.out.println("getting all movies...");
+//        for (Movie movie : MoviesArray.findAll()) {
+//            System.out.println(movie.getMovieName());
+//        }
+//    }
+//
+//    public static void getMovies(String category) {
+//        System.out.println("getting " + category + " movies...");
+//        for (Movie movie : MoviesArray.findAll()) {
+//            if (movie.getMovieCategory() == category) {
+//                System.out.println(movie.getMovieName());
+//            }
+//        }
+//    }
+
 }
