@@ -7,15 +7,15 @@ public class ServerNameGenerator {
     public static String[] adjectives = {"dark", "happy", "sad", "angry", "broken", "strong", "hairy", "proud", "huge",
             "tiny"};
 
-    public static String getRandomServerName() {
-        int randomNoun = new Random().nextInt(10);
-        int randomAdjective = new Random().nextInt(10);
-        return adjectives[randomAdjective] + "-" + nouns[randomNoun];
+    public static String getRandomWord(String[] words) {
+        Random rnd = new Random();
+        int randomIndex = rnd.nextInt(words.length);
+        return words[randomIndex];
     }
 
     public static void main(String[] args) {
 
-            System.out.println(getRandomServerName());
+            System.out.println(getRandomWord(adjectives) + "-" + getRandomWord(nouns));
 
     }
 

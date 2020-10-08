@@ -28,8 +28,7 @@ public class Person {
 
     public static Person[] addPerson(Person[] people, Person newPerson) {
         Person[] newPeopleArray = Arrays.copyOf(people, people.length + 1);
-        newPeopleArray[people.length] = newPerson;
-
+        newPeopleArray[newPeopleArray.length - 1] = newPerson;
         return newPeopleArray;
     }
 

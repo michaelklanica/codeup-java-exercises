@@ -11,15 +11,11 @@ public class ArraysExercises {
         // elements will be empty (null by default)
         System.out.println(Arrays.toString(people));
 
-        // Create three Person objects:
-        Person person1 = new Person("Mike");
-        Person person2 = new Person("Eva");
-        Person person3 = new Person("Skye");
-
+        // Create three Person objects &
         // Assign Person objects to people:
-        people[0] = person1;
-        people[1] = person2;
-        people[2] = person3;
+        people[0] = new Person("Mike");
+        people[1] = new Person("Eva");
+        people[2] = new Person("Skye");
 
         // Iterate through 'people' array and print each:
         // EX1
