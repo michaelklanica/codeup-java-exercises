@@ -2,19 +2,21 @@ package shapes;
 
 public class Square extends Rectangle{
 
-    protected double side;
-
     public Square(double aSide) {
         super(aSide, aSide);
-        this.side = aSide;
     }
 
+    @Override
     public double getArea(){
-        return this.side * this.side;
+        System.out.println("square");
+        // use 'length' because all sides are same, and aSide is associated with length and width.
+        return Math.pow(this.length, 2);
     }
 
+    @Override
     public double getPerimeter() {
-        return this.side * 4;
+        System.out.println("square");
+        return this.width * 4;
     }
 
 
