@@ -10,14 +10,13 @@ public class Input {
     }
 
     public String getString() {
-        System.out.print("Enter a string: ");
         return this.scanner.nextLine();
     }
 
     public boolean yesNo() {
-        System.out.println("Enter yes or no");
+        System.out.println("enter 'X' to exit.");
         String input = this.scanner.nextLine();
-        return input.trim().toLowerCase().equals("yes");
+        return input.trim().toLowerCase().equals("x");
     }
 
     public int getInt(int min, int max) {
