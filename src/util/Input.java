@@ -14,9 +14,9 @@ public class Input {
     }
 
     public boolean yesNo() {
-        System.out.println("enter 'X' to exit.");
+        System.out.println("enter 'yes' or 'no'");
         String input = this.scanner.nextLine();
-        return input.trim().toLowerCase().equals("x");
+        return input.trim().toLowerCase().equals("no");
     }
 
     public int getInt(int min, int max) {
