@@ -18,17 +18,19 @@ public class Student {
     public String getName() {
         return this.name;
     }
+
     // adds the given grade to the grades property
     public void addGrade(int grade){
         this.grades.add(grade);
     }
+
     // returns the average of the students grades
     public double getGradeAverage() {
-        float total = 0;
-        for (int grade : grades) {
+        double total = 0;
+        for (int grade : this.grades) {
             total += grade;
         }
-        return total / grades.size();
+        return total / this.grades.size();
     }
 
 }
