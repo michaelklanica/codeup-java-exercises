@@ -17,7 +17,7 @@ public class MoviesApplication {
             System.out.println("6 - view movies in comedy category");
             System.out.println("7 - view movies in musical category\n");
 
-            switch (input.getInt(0, 7)) {
+            switch (input.getInt(0, 7, "enter a number")) {
                 case 0:
                     System.out.println("exiting...");
                     return;

@@ -21,11 +21,17 @@ public class Input {
         return input.trim().toLowerCase().equals("no");
     }
 
-    public int getInt(int min, int max) {
+    public int getInt(int min, int max, String prompt) {
         while (true) {
-            System.out.printf("Enter a number between %d and %d: ", min, max);
-            String input = scanner.nextLine();
-            int num = Integer.parseInt(input);
+            System.out.printf(prompt);
+            int num;
+            try {
+                String input = scanner.nextLine();
+                num = Integer.parseInt(input);
+            } catch (RuntimeException re) {
+                System.out.println("Enter an integer");
+                return getInt(min, max, prompt);
+            }
             if (num >= min && num <= max) {
                 return num;
             }

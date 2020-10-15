@@ -12,7 +12,7 @@ public class GroceryListApplication {
         String foodCategory = "";
         System.out.println("Choose from the following item categories:");
         System.out.println("1. Produce\n2. Frozen\n3. Meat\n4. Dairy\n5. Dry Goods\n6. Bakery");
-        int input = userInput.getInt(1,6);
+        int input = userInput.getInt(1,6, "enter a number");
         switch (input) {
             case 1:
                 System.out.println("Add some produce...");
