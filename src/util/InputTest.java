@@ -1,19 +1,17 @@
 package util;
 
-
-import java.util.Scanner;
-
 public class InputTest {
     public static void main(String[] args) {
         Input input = new Input();
+        try {
+            int num = input.getInt();
 
-        if (input.yesNo()) {
-            System.out.println("This is true");
-        } else {
-            System.out.println("Thios is false");
+            System.out.println(num);
+        } catch(NumberFormatException e) {
+            System.out.println("Number format exception");
         }
 
-        System.out.println(input.getInt(120, 350));
 
     }
+
 }
