@@ -27,7 +27,7 @@ public class MethodsExercises {
 
     }
 
-        public static long addNums(long num1, long num2) {
+    public static long addNums(long num1, long num2) {
         return num1 + num2;
     }
 
@@ -66,18 +66,18 @@ public class MethodsExercises {
         }
         long total = 1;
         for (int i = number; i > 1; i--) {
-            System.out.println("total = " + total + " * " + i);
+//            System.out.println("total = " + total + " * " + i);
             total *= i;
         }
         return total;
     }
 
     public static void randomize(short sides) {
-        System.out.println( (int) Math.floor(Math.random() * sides));
+        System.out.println((int) Math.floor(Math.random() * sides));
     }
 
-    public static void rollDice (Scanner input){
-        while(true) {
+    public static void rollDice(Scanner input) {
+        while (true) {
             System.out.println("Number of sides: ");
             short sides = Short.parseShort(input.nextLine());
             randomize(sides);
